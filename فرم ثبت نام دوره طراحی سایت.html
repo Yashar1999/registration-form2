@@ -1,0 +1,3567 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>
+فرم ثبت نام الکترونیک دوره طراحی سایت
+</title>
+
+<!-- =====================================================
+     EmailJS
+===================================================== -->
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<!-- =====================================================
+     HTML2PDF
+===================================================== -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+
+<style>
+
+/* =====================================================
+   RESET
+===================================================== */
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+    font-family:
+        Tahoma,
+        Arial,
+        sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    min-height:100vh;
+
+    background:
+        radial-gradient(
+            circle at 10% 10%,
+            rgba(59,130,246,.16),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 90% 80%,
+            rgba(99,102,241,.12),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #eef4ff,
+            #f8fafc
+        );
+
+    color:#1e293b;
+
+    padding:30px 15px;
+}
+
+
+/* =====================================================
+   CONTAINER
+===================================================== */
+
+.container{
+
+    width:100%;
+    max-width:1050px;
+
+    margin:auto;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.header{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:45px 25px;
+
+    text-align:center;
+
+    color:white;
+
+    border-radius:
+        28px 28px 0 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            #1d4ed8,
+            #4f46e5,
+            #7c3aed
+        );
+
+    box-shadow:
+        0 25px 60px
+        rgba(37,99,235,.25);
+}
+
+.header::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:250px;
+    height:250px;
+
+    border-radius:50%;
+
+    background:
+        rgba(255,255,255,.08);
+
+    top:-120px;
+    right:-80px;
+}
+
+.header::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:200px;
+    height:200px;
+
+    border-radius:50%;
+
+    background:
+        rgba(255,255,255,.06);
+
+    bottom:-120px;
+    left:-70px;
+}
+
+.logo{
+
+    position:relative;
+    z-index:2;
+
+    width:90px;
+    height:90px;
+
+    margin:auto;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    overflow:hidden;
+
+    border-radius:25px;
+
+    background:
+        rgba(255,255,255,.16);
+
+    border:
+        1px solid
+        rgba(255,255,255,.3);
+
+    box-shadow:
+        0 12px 30px
+        rgba(0,0,0,.15);
+}
+
+.logo img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:contain;
+
+    padding:7px;
+}
+
+.logo-fallback{
+
+    font-size:40px;
+}
+
+.header h1{
+
+    position:relative;
+    z-index:2;
+
+    margin-top:20px;
+    margin-bottom:10px;
+
+    font-size:28px;
+
+    line-height:1.6;
+}
+
+.header p{
+
+    position:relative;
+    z-index:2;
+
+    font-size:14px;
+
+    opacity:.9;
+}
+
+.teacher{
+
+    position:relative;
+    z-index:2;
+
+    display:inline-block;
+
+    margin-top:18px;
+
+    padding:9px 18px;
+
+    border-radius:30px;
+
+    background:
+        rgba(255,255,255,.14);
+
+    border:
+        1px solid
+        rgba(255,255,255,.2);
+
+    font-size:15px;
+
+    font-weight:bold;
+}
+
+
+/* =====================================================
+   FORM BOX
+===================================================== */
+
+.form-box{
+
+    background:white;
+
+    padding:38px;
+
+    border-radius:
+        0 0 28px 28px;
+
+    box-shadow:
+        0 25px 60px
+        rgba(15,23,42,.09);
+}
+
+
+/* =====================================================
+   SECTIONS
+===================================================== */
+
+.section{
+
+    margin-bottom:40px;
+}
+
+.section-title{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin-bottom:22px;
+
+    padding-bottom:13px;
+
+    border-bottom:
+        2px solid #eef2f7;
+}
+
+.number{
+
+    width:42px;
+    height:42px;
+
+    flex-shrink:0;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    border-radius:13px;
+
+    color:#2563eb;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eff6ff,
+            #eef2ff
+        );
+
+    font-weight:bold;
+
+    box-shadow:
+        0 5px 15px
+        rgba(37,99,235,.08);
+}
+
+.section-title h2{
+
+    font-size:18px;
+
+    color:#0f172a;
+}
+
+
+/* =====================================================
+   GRID
+===================================================== */
+
+.grid{
+
+    display:grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap:19px;
+}
+
+.full{
+
+    grid-column:
+        1 / -1;
+}
+
+
+/* =====================================================
+   INPUT
+===================================================== */
+
+.input-group{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:8px;
+}
+
+label{
+
+    font-size:13px;
+
+    font-weight:bold;
+
+    color:#334155;
+}
+
+.required::after{
+
+    content:" *";
+
+    color:#ef4444;
+}
+
+input,
+select,
+textarea{
+
+    width:100%;
+
+    border:
+        1px solid #dbe3ee;
+
+    background:#f8fafc;
+
+    padding:14px;
+
+    border-radius:12px;
+
+    outline:none;
+
+    font-size:14px;
+
+    color:#1e293b;
+
+    transition:
+        .25s ease;
+}
+
+input:hover,
+select:hover,
+textarea:hover{
+
+    border-color:#bfdbfe;
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+
+    border-color:#2563eb;
+
+    background:white;
+
+    box-shadow:
+        0 0 0 4px
+        rgba(37,99,235,.08);
+}
+
+textarea{
+
+    min-height:110px;
+
+    resize:vertical;
+}
+
+
+/* =====================================================
+   OPTIONS
+===================================================== */
+
+.options{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+}
+
+.option input{
+
+    display:none;
+}
+
+.option label{
+
+    display:block;
+
+    padding:
+        10px 17px;
+
+    border:
+        1px solid #dbe3ee;
+
+    background:#f8fafc;
+
+    border-radius:11px;
+
+    cursor:pointer;
+
+    font-weight:normal;
+
+    transition:.2s;
+}
+
+.option label:hover{
+
+    border-color:#93c5fd;
+
+    background:#eff6ff;
+}
+
+.option input:checked + label{
+
+    color:#1d4ed8;
+
+    background:#eff6ff;
+
+    border-color:#2563eb;
+
+    font-weight:bold;
+
+    box-shadow:
+        0 5px 15px
+        rgba(37,99,235,.08);
+}
+
+
+/* =====================================================
+   RULES
+===================================================== */
+
+.rules-box{
+
+    margin-top:20px;
+    margin-bottom:28px;
+
+    overflow:hidden;
+
+    border:
+        1px solid #bfdbfe;
+
+    border-radius:20px;
+
+    background:#f8fafc;
+
+    box-shadow:
+        0 12px 35px
+        rgba(37,99,235,.08);
+}
+
+.rules-header{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    padding:21px;
+
+    color:white;
+
+    background:
+        linear-gradient(
+            135deg,
+            #2563eb,
+            #4f46e5
+        );
+}
+
+.rules-icon{
+
+    width:50px;
+    height:50px;
+
+    flex-shrink:0;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    border-radius:15px;
+
+    background:
+        rgba(255,255,255,.15);
+
+    font-size:23px;
+}
+
+.rules-header h2{
+
+    font-size:17px;
+
+    margin-bottom:5px;
+}
+
+.rules-header p{
+
+    font-size:12px;
+
+    opacity:.9;
+}
+
+.rules-content{
+
+    max-height:320px;
+
+    overflow-y:auto;
+
+    padding:22px 27px;
+
+    background:white;
+}
+
+.rules-content ol{
+
+    padding-right:20px;
+}
+
+.rules-content li{
+
+    margin-bottom:12px;
+
+    color:#475569;
+
+    font-size:13px;
+
+    line-height:1.95;
+}
+
+.rules-content li::marker{
+
+    color:#2563eb;
+
+    font-weight:bold;
+}
+
+.rules-agreement{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:12px;
+
+    padding:18px 20px;
+
+    cursor:pointer;
+
+    background:#eff6ff;
+
+    border-top:
+        1px solid #dbeafe;
+
+    color:#1e3a8a;
+
+    line-height:1.9;
+}
+
+.rules-agreement input{
+
+    width:20px;
+    height:20px;
+
+    flex-shrink:0;
+
+    margin-top:4px;
+
+    accent-color:#2563eb;
+
+    cursor:pointer;
+}
+
+.rules-agreement span{
+
+    font-size:13px;
+
+    font-weight:bold;
+}
+
+
+/* =====================================================
+   SUBMIT
+===================================================== */
+
+.submit-area{
+
+    display:flex;
+
+    gap:12px;
+
+    margin-top:25px;
+}
+
+button{
+
+    border:none;
+
+    cursor:pointer;
+
+    padding:
+        15px 22px;
+
+    border-radius:13px;
+
+    font-size:14px;
+
+    font-weight:bold;
+
+    transition:.25s;
+}
+
+button:hover{
+
+    transform:translateY(-2px);
+}
+
+button:disabled{
+
+    opacity:.6;
+
+    cursor:not-allowed;
+
+    transform:none;
+}
+
+.submit{
+
+    flex:1;
+
+    color:white;
+
+    background:
+        linear-gradient(
+            135deg,
+            #2563eb,
+            #4f46e5
+        );
+
+    box-shadow:
+        0 10px 25px
+        rgba(37,99,235,.2);
+}
+
+.submit:hover{
+
+    box-shadow:
+        0 15px 35px
+        rgba(37,99,235,.3);
+}
+
+.reset{
+
+    background:#f1f5f9;
+
+    color:#334155;
+}
+
+
+/* =====================================================
+   STATUS
+===================================================== */
+
+.status{
+
+    display:none;
+
+    margin-top:18px;
+
+    padding:15px;
+
+    border-radius:13px;
+
+    text-align:center;
+
+    font-size:13px;
+
+    line-height:1.8;
+}
+
+.status.success{
+
+    display:block;
+
+    color:#166534;
+
+    background:#dcfce7;
+
+    border:
+        1px solid #bbf7d0;
+}
+
+.status.error{
+
+    display:block;
+
+    color:#991b1b;
+
+    background:#fee2e2;
+
+    border:
+        1px solid #fecaca;
+}
+
+
+/* =====================================================
+   RESULT
+===================================================== */
+
+#result{
+
+    display:none;
+
+    margin-top:25px;
+
+    padding:30px;
+
+    background:white;
+
+    border-radius:24px;
+
+    box-shadow:
+        0 20px 50px
+        rgba(15,23,42,.1);
+}
+
+.success-box{
+
+    text-align:center;
+
+    padding-bottom:25px;
+
+    margin-bottom:25px;
+
+    border-bottom:
+        1px solid #e2e8f0;
+}
+
+.success-icon{
+
+    width:70px;
+    height:70px;
+
+    margin:auto;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:#dcfce7;
+
+    color:#16a34a;
+
+    font-size:32px;
+
+    box-shadow:
+        0 10px 25px
+        rgba(22,163,74,.12);
+}
+
+.success-box h2{
+
+    margin-top:15px;
+
+    color:#15803d;
+
+    font-size:20px;
+}
+
+.registration-number{
+
+    margin-top:10px;
+
+    color:#64748b;
+
+    font-size:14px;
+}
+
+.registration-number strong{
+
+    color:#2563eb;
+
+    font-size:16px;
+}
+
+
+/* =====================================================
+   RESULT GRID
+===================================================== */
+
+.result-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap:12px;
+}
+
+.result-item{
+
+    padding:15px;
+
+    border-radius:12px;
+
+    background:#f8fafc;
+
+    border:
+        1px solid #eef2f7;
+}
+
+.result-item strong{
+
+    display:block;
+
+    margin-bottom:5px;
+
+    color:#64748b;
+
+    font-size:11px;
+}
+
+.result-item span{
+
+    color:#0f172a;
+
+    font-size:13px;
+
+    font-weight:bold;
+}
+
+
+/* =====================================================
+   RESULT BUTTONS
+===================================================== */
+
+.result-buttons{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap:10px;
+
+    margin-top:23px;
+}
+
+.download{
+
+    color:white;
+
+    background:#16a34a;
+}
+
+.print{
+
+    color:white;
+
+    background:#0f172a;
+}
+
+.whatsapp{
+
+    color:white;
+
+    background:#16a34a;
+}
+
+.download:hover{
+
+    background:#15803d;
+}
+
+.whatsapp:hover{
+
+    background:#128c3a;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.footer{
+
+    margin-top:20px;
+
+    text-align:center;
+
+    color:#64748b;
+
+    font-size:12px;
+
+    line-height:2;
+}
+
+
+/* =====================================================
+   PDF AREA
+===================================================== */
+
+#pdfArea{
+
+    position:absolute;
+
+    left:-99999px;
+
+    top:0;
+
+    width:794px;
+
+    background:white;
+
+    color:#111;
+
+    direction:rtl;
+
+    padding:35px;
+}
+
+.pdf-header{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    padding-bottom:15px;
+
+    border-bottom:2px solid #111;
+}
+
+.pdf-logo{
+
+    width:65px;
+    height:65px;
+
+    border:2px solid #111;
+
+    border-radius:12px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    overflow:hidden;
+
+    font-size:25px;
+}
+
+.pdf-logo img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:contain;
+}
+
+.pdf-header h1{
+
+    font-size:20px;
+
+    margin-bottom:5px;
+}
+
+.pdf-header p{
+
+    font-size:12px;
+}
+
+.pdf-section-title{
+
+    margin-top:18px;
+
+    padding:8px;
+
+    font-size:13px;
+
+    font-weight:bold;
+
+    background:#eeeeee;
+
+    border:1px solid #222;
+}
+
+.pdf-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    border-top:1px solid #222;
+
+    border-right:1px solid #222;
+}
+
+.pdf-item{
+
+    min-height:42px;
+
+    padding:9px;
+
+    border-left:1px solid #222;
+
+    border-bottom:1px solid #222;
+
+    font-size:11px;
+
+    line-height:1.8;
+}
+
+.pdf-description{
+
+    min-height:70px;
+
+    padding:10px;
+
+    border:
+        1px solid #222;
+
+    font-size:11px;
+
+    line-height:1.8;
+}
+
+.pdf-agreement{
+
+    margin-top:18px;
+
+    padding:10px;
+
+    border:
+        1px solid #222;
+
+    font-size:11px;
+
+    line-height:2;
+}
+
+.pdf-signature{
+
+    display:grid;
+
+    grid-template-columns:
+        1fr 1fr 1fr;
+
+    margin-top:40px;
+
+    text-align:center;
+
+    font-size:11px;
+}
+
+
+/* =====================================================
+   PRINT
+===================================================== */
+
+#printForm{
+
+    display:none;
+}
+
+@media print{
+
+    @page{
+
+        size:A4;
+
+        margin:14mm;
+    }
+
+    body{
+
+        padding:0;
+
+        background:white;
+    }
+
+    body > *{
+
+        display:none !important;
+    }
+
+    #printForm{
+
+        display:block !important;
+
+        width:100%;
+
+        direction:rtl;
+
+        color:#000;
+    }
+
+    .print-header{
+
+        display:flex;
+
+        align-items:center;
+
+        gap:15px;
+
+        padding-bottom:15px;
+    }
+
+    .print-logo{
+
+        width:60px;
+        height:60px;
+
+        display:flex;
+
+        align-items:center;
+        justify-content:center;
+
+        overflow:hidden;
+
+        border:
+            2px solid #111;
+
+        border-radius:12px;
+
+        font-size:25px;
+    }
+
+    .print-logo img{
+
+        width:100%;
+        height:100%;
+
+        object-fit:contain;
+    }
+
+    .print-header h1{
+
+        font-size:21px;
+    }
+
+    .print-header p{
+
+        margin-top:5px;
+
+        font-size:12px;
+    }
+
+    .print-line{
+
+        border-top:
+            2px solid #111;
+
+        margin-bottom:18px;
+    }
+
+    .print-title{
+
+        margin-top:14px;
+
+        padding:8px;
+
+        font-size:13px;
+
+        font-weight:bold;
+
+        background:#eee;
+
+        border:1px solid #222;
+    }
+
+    .print-grid{
+
+        display:grid;
+
+        grid-template-columns:
+            1fr 1fr;
+
+        border-top:
+            1px solid #222;
+
+        border-right:
+            1px solid #222;
+    }
+
+    .print-item{
+
+        min-height:40px;
+
+        padding:9px;
+
+        border-left:
+            1px solid #222;
+
+        border-bottom:
+            1px solid #222;
+
+        font-size:11px;
+
+        line-height:1.8;
+    }
+
+    .print-description{
+
+        min-height:70px;
+
+        padding:10px;
+
+        border:
+            1px solid #222;
+
+        font-size:11px;
+
+        line-height:1.8;
+    }
+
+    .print-agreement{
+
+        margin-top:18px;
+
+        padding:10px;
+
+        border:
+            1px solid #222;
+
+        font-size:11px;
+
+        line-height:2;
+    }
+
+    .signature{
+
+        display:grid;
+
+        grid-template-columns:
+            1fr 1fr 1fr;
+
+        margin-top:40px;
+
+        text-align:center;
+
+        font-size:11px;
+    }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:700px){
+
+    body{
+
+        padding:15px 10px;
+    }
+
+    .header{
+
+        padding:35px 18px;
+
+        border-radius:
+            22px 22px 0 0;
+    }
+
+    .header h1{
+
+        font-size:21px;
+    }
+
+    .teacher{
+
+        font-size:13px;
+    }
+
+    .form-box{
+
+        padding:23px 16px;
+
+        border-radius:
+            0 0 22px 22px;
+    }
+
+    .grid{
+
+        grid-template-columns:1fr;
+    }
+
+    .full{
+
+        grid-column:auto;
+    }
+
+    .submit-area{
+
+        flex-direction:column;
+    }
+
+    .result-grid{
+
+        grid-template-columns:1fr;
+    }
+
+    .result-buttons{
+
+        grid-template-columns:1fr;
+    }
+
+    .rules-content{
+
+        max-height:350px;
+
+        padding:17px;
+    }
+
+    .rules-header{
+
+        padding:17px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="header">
+
+    <div class="logo">
+
+        <img
+            src="logo.png"
+            alt="لوگوی مدرس"
+            onerror="
+                this.style.display='none';
+                this.parentElement.innerHTML='<span class=&quot;logo-fallback&quot;>💻</span>';
+            "
+        >
+
+    </div>
+
+    <h1>
+        فرم ثبت نام الکترونیک دوره طراحی سایت
+    </h1>
+
+    <p>
+        ثبت‌نام آنلاین دوره آموزشی طراحی سایت
+    </p>
+
+    <div class="teacher">
+        مدرس: مهندس یاشار نژادمهدوی
+    </div>
+
+</header>
+
+
+<!-- =====================================================
+     FORM
+===================================================== -->
+
+<div class="form-box">
+
+<form id="registrationForm">
+
+
+<input
+    type="hidden"
+    name="registration_number"
+    id="registration_number"
+>
+
+<input
+    type="hidden"
+    name="teacher"
+    value="مهندس یاشار نژادمهدوی"
+>
+
+<input
+    type="hidden"
+    name="course"
+    value="طراحی سایت"
+>
+
+
+<!-- =====================================================
+     SECTION 1
+===================================================== -->
+
+<div class="section">
+
+<div class="section-title">
+
+<div class="number">۱</div>
+
+<h2>
+مشخصات هنرجو
+</h2>
+
+</div>
+
+
+<div class="grid">
+
+
+<div class="input-group">
+
+<label class="required">
+نام و نام خانوادگی
+</label>
+
+<input
+    type="text"
+    name="fullname"
+    id="fullname"
+    required
+>
+
+</div>
+
+
+<div class="input-group">
+
+<label class="required">
+کد ملی
+</label>
+
+<input
+    type="text"
+    name="national_code"
+    id="nationalCode"
+    maxlength="10"
+    inputmode="numeric"
+    required
+>
+
+</div>
+
+
+<div class="input-group">
+
+<label>
+تاریخ تولد
+</label>
+
+<input
+    type="text"
+    name="birth_date"
+    id="birthDate"
+    placeholder="مثلاً 1385/05/20"
+>
+
+</div>
+
+
+<div class="input-group">
+
+<label class="required">
+شماره تماس
+</label>
+
+<input
+    type="tel"
+    name="phone"
+    id="phone"
+    placeholder="09xxxxxxxxx"
+    required
+>
+
+</div>
+
+
+<div class="input-group">
+
+<label>
+شماره تماس ولی / والدین
+</label>
+
+<input
+    type="tel"
+    name="parent_phone"
+    id="parentPhone"
+>
+
+</div>
+
+
+<div class="input-group">
+
+<label>
+رشته تحصیلی
+</label>
+
+<input
+    type="text"
+    name="field"
+    id="field"
+>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- =====================================================
+     SECTION 2
+===================================================== -->
+
+<div class="section">
+
+<div class="section-title">
+
+<div class="number">۲</div>
+
+<h2>
+اطلاعات آموزشی
+</h2>
+
+</div>
+
+
+<div class="grid">
+
+
+<div class="input-group">
+
+<label>
+میزان تحصیلات
+</label>
+
+<select
+    name="education"
+    id="education"
+>
+
+<option value="">
+انتخاب کنید
+</option>
+
+<option>دبیرستان</option>
+<option>دیپلم</option>
+<option>کاردانی</option>
+<option>کارشناسی</option>
+<option>کارشناسی ارشد</option>
+<option>دکتری</option>
+<option>سایر</option>
+
+</select>
+
+</div>
+
+
+<div class="input-group">
+
+<label>
+سطح آشنایی با کامپیوتر
+</label>
+
+<select
+    name="computer_level"
+    id="computerLevel"
+>
+
+<option value="">
+انتخاب کنید
+</option>
+
+<option>مبتدی</option>
+<option>متوسط</option>
+<option>خوب</option>
+<option>حرفه‌ای</option>
+
+</select>
+
+</div>
+
+
+<div class="input-group full">
+
+<label>
+میزان آشنایی با طراحی سایت
+</label>
+
+<div class="options">
+
+
+<div class="option">
+
+<input
+    type="radio"
+    name="web_level"
+    id="web0"
+    value="هیچ آشنایی ندارم"
+>
+
+<label for="web0">
+هیچ آشنایی ندارم
+</label>
+
+</div>
+
+
+<div class="option">
+
+<input
+    type="radio"
+    name="web_level"
+    id="web1"
+    value="مقدماتی"
+>
+
+<label for="web1">
+مقدماتی
+</label>
+
+</div>
+
+
+<div class="option">
+
+<input
+    type="radio"
+    name="web_level"
+    id="web2"
+    value="متوسط"
+>
+
+<label for="web2">
+متوسط
+</label>
+
+</div>
+
+
+<div class="option">
+
+<input
+    type="radio"
+    name="web_level"
+    id="web3"
+    value="پیشرفته"
+>
+
+<label for="web3">
+پیشرفته
+</label>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="input-group full">
+
+<label>
+آیا قبلاً HTML و CSS کار کرده‌اید؟
+</label>
+
+<div class="options">
+
+
+<div class="option">
+
+<input
+    type="radio"
+    name="html_css"
+    id="htmlYes"
+    value="بله"
+>
+
+<label for="htmlYes">
+بله
+</label>
+
+</div>
+
+
+<div class="option">
+
+<input
+    type="radio"
+    name="html_css"
+    id="htmlNo"
+    value="خیر"
+>
+
+<label for="htmlNo">
+خیر
+</label>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- =====================================================
+     SECTION 3
+===================================================== -->
+
+<div class="section">
+
+<div class="section-title">
+
+<div class="number">۳</div>
+
+<h2>
+هدف از شرکت در دوره
+</h2>
+
+</div>
+
+
+<div class="options">
+
+
+<div class="option">
+
+<input
+    type="radio"
+    name="goal"
+    id="goal1"
+    value="یادگیری طراحی سایت"
+>
+
+<label for="goal1">
+یادگیری طراحی سایت
+</label>
+
+</div>
+
+
+<div class="option">
+
+<input
+    type="radio"
+    name="goal"
+    id="goal2"
+    value="ورود به بازار کار"
+>
+
+<label for="goal2">
+ورود به بازار کار
+</label>
+
+</div>
+
+
+<div class="option">
+
+<input
+    type="radio"
+    name="goal"
+    id="goal3"
+    value="پروژه شخصی"
+>
+
+<label for="goal3">
+پروژه شخصی
+</label>
+
+</div>
+
+
+<div class="option">
+
+<input
+    type="radio"
+    name="goal"
+    id="goal4"
+    value="کسب درآمد"
+>
+
+<label for="goal4">
+کسب درآمد
+</label>
+
+</div>
+
+
+<div class="option">
+
+<input
+    type="radio"
+    name="goal"
+    id="goal5"
+    value="ارتقای مهارت"
+>
+
+<label for="goal5">
+ارتقای مهارت
+</label>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- =====================================================
+     SECTION 4
+===================================================== -->
+
+<div class="section">
+
+<div class="section-title">
+
+<div class="number">۴</div>
+
+<h2>
+تجهیزات هنرجو
+</h2>
+
+</div>
+
+
+<div class="grid">
+
+
+<div class="input-group">
+
+<label>
+آیا لپ‌تاپ یا کامپیوتر شخصی دارید؟
+</label>
+
+<div class="options">
+
+<div class="option">
+
+<input
+    type="radio"
+    name="personal_computer"
+    id="computerYes"
+    value="بله"
+>
+
+<label for="computerYes">
+بله
+</label>
+
+</div>
+
+
+<div class="option">
+
+<input
+    type="radio"
+    name="personal_computer"
+    id="computerNo"
+    value="خیر"
+>
+
+<label for="computerNo">
+خیر
+</label>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="input-group">
+
+<label>
+سیستم‌عامل
+</label>
+
+<select
+    name="operating_system"
+    id="os"
+>
+
+<option value="">
+انتخاب کنید
+</option>
+
+<option>Windows</option>
+<option>macOS</option>
+<option>Linux</option>
+<option>سایر</option>
+
+</select>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- =====================================================
+     SECTION 5
+===================================================== -->
+
+<div class="section">
+
+<div class="section-title">
+
+<div class="number">۵</div>
+
+<h2>
+اطلاعات دوره
+</h2>
+
+</div>
+
+
+<div class="grid">
+
+
+<div class="input-group">
+
+<label>
+عنوان دوره
+</label>
+
+<input
+    value="طراحی سایت"
+    readonly
+>
+
+</div>
+
+
+<div class="input-group">
+
+<label>
+مدرس
+</label>
+
+<input
+    value="مهندس یاشار نژادمهدوی"
+    readonly
+>
+
+</div>
+
+
+<div class="input-group">
+
+<label>
+تاریخ شروع دوره
+</label>
+
+<input
+    type="text"
+    name="start_date"
+    id="startDate"
+    placeholder="مثلاً 1405/06/01"
+>
+
+</div>
+
+
+<div class="input-group">
+
+<label>
+نحوه شرکت
+</label>
+
+<select
+    name="class_type"
+    id="classType"
+>
+
+<option value="">
+انتخاب کنید
+</option>
+
+<option>حضوری</option>
+<option>آنلاین</option>
+
+</select>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- =====================================================
+     SECTION 6
+===================================================== -->
+
+<div class="section">
+
+<div class="section-title">
+
+<div class="number">۶</div>
+
+<h2>
+توضیحات
+</h2>
+
+</div>
+
+
+<div class="input-group">
+
+<label>
+توضیحات یا درخواست خاص
+</label>
+
+<textarea
+    name="description"
+    id="description"
+    placeholder="در صورت نیاز توضیحات خود را وارد کنید..."
+></textarea>
+
+</div>
+
+</div>
+
+
+<!-- =====================================================
+     RULES
+===================================================== -->
+
+<div class="rules-box">
+
+<div class="rules-header">
+
+<div class="rules-icon">
+📋
+</div>
+
+<div>
+
+<h2>
+قوانین و مقررات دوره
+</h2>
+
+<p>
+لطفاً قوانین را با دقت مطالعه و سپس تأیید کنید.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="rules-content">
+
+<ol>
+
+<li>
+هنرجو موظف است اطلاعات ثبت‌نامی خود را به‌صورت صحیح و کامل وارد کند.
+</li>
+
+<li>
+حضور منظم و به‌موقع در کلاس‌ها الزامی است.
+</li>
+
+<li>
+در صورت برگزاری آنلاین، هنرجو موظف است قبل از شروع کلاس از اتصال اینترنت و تجهیزات خود اطمینان حاصل کند.
+</li>
+
+<li>
+رعایت احترام متقابل بین مدرس و سایر هنرجویان الزامی است.
+</li>
+
+<li>
+ضبط، انتشار یا بازنشر محتوای آموزشی دوره بدون اجازه مدرس مجاز نیست.
+</li>
+
+<li>
+انتشار لینک کلاس، فایل‌ها، جزوه‌ها و محتوای اختصاصی دوره برای افراد خارج از دوره مجاز نیست.
+</li>
+
+<li>
+مسئولیت حفظ اطلاعات ورود به کلاس یا حساب کاربری بر عهده هنرجو است.
+</li>
+
+<li>
+غیبت هنرجو به‌تنهایی موجب الزام به برگزاری جلسه جبرانی نخواهد بود، مگر اینکه مدرس شرایط دیگری اعلام کند.
+</li>
+
+<li>
+هنرجو موظف است تکالیف و تمرین‌های دوره را در زمان اعلام‌شده انجام دهد.
+</li>
+
+<li>
+رعایت نظم کلاس و خودداری از ایجاد مزاحمت برای مدرس و سایر هنرجویان الزامی است.
+</li>
+
+<li>
+در صورت وجود شرایط خاص آموزشی یا فنی، هنرجو باید موضوع را در اولین فرصت با مدرس در میان بگذارد.
+</li>
+
+<li>
+ثبت‌نام در دوره به منزله مطالعه و پذیرش قوانین و مقررات فوق است.
+</li>
+
+<li>
+مدرس می‌تواند در صورت نقض جدی قوانین، مطابق شرایط دوره نسبت به تذکر یا محدود کردن دسترسی هنرجو به کلاس اقدام کند.
+</li>
+
+</ol>
+
+</div>
+
+
+<label class="rules-agreement">
+
+<input
+    type="checkbox"
+    id="rulesAgreement"
+    name="rules_agreement"
+    value="تأیید شد"
+    required
+>
+
+<span>
+تمامی قوانین و مقررات دوره را مطالعه کردم و با ثبت‌نام در دوره، آن‌ها را می‌پذیرم.
+</span>
+
+</label>
+
+</div>
+
+
+<!-- =====================================================
+     SUBMIT
+===================================================== -->
+
+<div class="submit-area">
+
+<button
+    type="submit"
+    class="submit"
+    id="submitBtn"
+>
+
+✓ ثبت نهایی اطلاعات
+
+</button>
+
+
+<button
+    type="reset"
+    class="reset"
+>
+
+پاک کردن فرم
+
+</button>
+
+</div>
+
+
+<div
+    id="status"
+    class="status"
+></div>
+
+
+</form>
+
+</div>
+
+
+<!-- =====================================================
+     RESULT
+===================================================== -->
+
+<div id="result">
+
+
+<div class="success-box">
+
+<div class="success-icon">
+✓
+</div>
+
+<h2>
+ثبت‌نام شما با موفقیت انجام شد
+</h2>
+
+<div class="registration-number">
+
+شماره ثبت‌نام:
+
+<strong id="r-id"></strong>
+
+</div>
+
+</div>
+
+
+<div class="result-grid">
+
+
+<div class="result-item">
+
+<strong>
+نام و نام خانوادگی
+</strong>
+
+<span id="r-fullname"></span>
+
+</div>
+
+
+<div class="result-item">
+
+<strong>
+کد ملی
+</strong>
+
+<span id="r-national"></span>
+
+</div>
+
+
+<div class="result-item">
+
+<strong>
+شماره تماس
+</strong>
+
+<span id="r-phone"></span>
+
+</div>
+
+
+<div class="result-item">
+
+<strong>
+تحصیلات
+</strong>
+
+<span id="r-education"></span>
+
+</div>
+
+
+<div class="result-item">
+
+<strong>
+سطح طراحی سایت
+</strong>
+
+<span id="r-web"></span>
+
+</div>
+
+
+<div class="result-item">
+
+<strong>
+هدف
+</strong>
+
+<span id="r-goal"></span>
+
+</div>
+
+</div>
+
+
+<div class="result-buttons">
+
+
+<button
+    class="download"
+    type="button"
+    onclick="downloadPDF()"
+>
+
+📄 دانلود PDF
+
+</button>
+
+
+<button
+    class="print"
+    type="button"
+    onclick="printForm()"
+>
+
+🖨 چاپ فرم A4
+
+</button>
+
+
+<button
+    class="whatsapp"
+    type="button"
+    onclick="sendWhatsApp()"
+>
+
+📱 ارسال در واتساپ
+
+</button>
+
+</div>
+
+</div>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<div class="footer">
+
+فرم ثبت نام الکترونیک دوره طراحی سایت
+
+<br>
+
+مدرس: مهندس یاشار نژادمهدوی
+
+</div>
+
+
+</div>
+
+
+<!-- =====================================================
+     PRINT VERSION
+===================================================== -->
+
+<div id="printForm">
+
+<div class="print-header">
+
+<div class="print-logo">
+
+<img
+    src="logo.png"
+    alt="لوگو"
+    onerror="this.style.display='none';this.parentElement.innerHTML='💻';"
+>
+
+</div>
+
+<div>
+
+<h1>
+فرم ثبت نام الکترونیک دوره طراحی سایت
+</h1>
+
+<p>
+مدرس: مهندس یاشار نژادمهدوی
+</p>
+
+</div>
+
+</div>
+
+
+<div class="print-line"></div>
+
+
+<div class="print-title">
+مشخصات ثبت‌نام
+</div>
+
+
+<div class="print-grid">
+
+
+<div class="print-item">
+<strong>شماره ثبت‌نام:</strong>
+<span id="p-id"></span>
+</div>
+
+
+<div class="print-item">
+<strong>نام و نام خانوادگی:</strong>
+<span id="p-fullname"></span>
+</div>
+
+
+<div class="print-item">
+<strong>کد ملی:</strong>
+<span id="p-national"></span>
+</div>
+
+
+<div class="print-item">
+<strong>تاریخ تولد:</strong>
+<span id="p-birth"></span>
+</div>
+
+
+<div class="print-item">
+<strong>شماره تماس:</strong>
+<span id="p-phone"></span>
+</div>
+
+
+<div class="print-item">
+<strong>شماره ولی:</strong>
+<span id="p-parent"></span>
+</div>
+
+
+<div class="print-item">
+<strong>رشته تحصیلی:</strong>
+<span id="p-field"></span>
+</div>
+
+
+<div class="print-item">
+<strong>تحصیلات:</strong>
+<span id="p-education"></span>
+</div>
+
+</div>
+
+
+<div class="print-title">
+اطلاعات آموزشی
+</div>
+
+
+<div class="print-grid">
+
+
+<div class="print-item">
+<strong>سطح کامپیوتر:</strong>
+<span id="p-computer"></span>
+</div>
+
+
+<div class="print-item">
+<strong>سطح طراحی سایت:</strong>
+<span id="p-web"></span>
+</div>
+
+
+<div class="print-item">
+<strong>HTML و CSS:</strong>
+<span id="p-html"></span>
+</div>
+
+
+<div class="print-item">
+<strong>هدف:</strong>
+<span id="p-goal"></span>
+</div>
+
+
+<div class="print-item">
+<strong>سیستم‌عامل:</strong>
+<span id="p-os"></span>
+</div>
+
+
+<div class="print-item">
+<strong>کامپیوتر شخصی:</strong>
+<span id="p-pc"></span>
+</div>
+
+</div>
+
+
+<div class="print-title">
+اطلاعات دوره
+</div>
+
+
+<div class="print-grid">
+
+
+<div class="print-item">
+<strong>عنوان دوره:</strong>
+طراحی سایت
+</div>
+
+
+<div class="print-item">
+<strong>مدرس:</strong>
+مهندس یاشار نژادمهدوی
+</div>
+
+
+<div class="print-item">
+<strong>تاریخ شروع:</strong>
+<span id="p-start"></span>
+</div>
+
+
+<div class="print-item">
+<strong>نحوه شرکت:</strong>
+<span id="p-type"></span>
+</div>
+
+</div>
+
+
+<div class="print-title">
+توضیحات
+</div>
+
+
+<div class="print-description">
+
+<span id="p-description"></span>
+
+</div>
+
+
+<div class="print-agreement">
+
+اینجانب صحت اطلاعات واردشده را تأیید کرده و متعهد می‌شوم قوانین و مقررات دوره آموزشی را رعایت نمایم.
+
+<br>
+
+وضعیت تأیید قوانین:
+<strong>تأیید شده</strong>
+
+</div>
+
+
+<div class="signature">
+
+
+<div>
+
+امضای هنرجو:
+
+<br><br>
+
+............................
+
+</div>
+
+
+<div>
+
+امضای مدرس:
+
+<br><br>
+
+مهندس یاشار نژادمهدوی
+
+</div>
+
+
+<div>
+
+تاریخ:
+
+<br><br>
+
+............................
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- =====================================================
+     PDF AREA
+===================================================== -->
+
+<div id="pdfArea">
+
+<div class="pdf-header">
+
+<div class="pdf-logo">
+
+<img
+    src="logo.png"
+    alt="لوگو"
+>
+
+</div>
+
+<div>
+
+<h1>
+فرم ثبت نام الکترونیک دوره طراحی سایت
+</h1>
+
+<p>
+مدرس: مهندس یاشار نژادمهدوی
+</p>
+
+</div>
+
+</div>
+
+
+<div class="pdf-section-title">
+مشخصات هنرجو
+</div>
+
+<div class="pdf-grid">
+
+
+<div class="pdf-item">
+<strong>شماره ثبت‌نام:</strong>
+<span id="pdf-id"></span>
+</div>
+
+
+<div class="pdf-item">
+<strong>نام و نام خانوادگی:</strong>
+<span id="pdf-fullname"></span>
+</div>
+
+
+<div class="pdf-item">
+<strong>کد ملی:</strong>
+<span id="pdf-national"></span>
+</div>
+
+
+<div class="pdf-item">
+<strong>تاریخ تولد:</strong>
+<span id="pdf-birth"></span>
+</div>
+
+
+<div class="pdf-item">
+<strong>شماره تماس:</strong>
+<span id="pdf-phone"></span>
+</div>
+
+
+<div class="pdf-item">
+<strong>شماره ولی:</strong>
+<span id="pdf-parent"></span>
+</div>
+
+
+<div class="pdf-item">
+<strong>رشته تحصیلی:</strong>
+<span id="pdf-field"></span>
+</div>
+
+
+<div class="pdf-item">
+<strong>تحصیلات:</strong>
+<span id="pdf-education"></span>
+</div>
+
+</div>
+
+
+<div class="pdf-section-title">
+اطلاعات آموزشی
+</div>
+
+<div class="pdf-grid">
+
+
+<div class="pdf-item">
+<strong>سطح کامپیوتر:</strong>
+<span id="pdf-computer"></span>
+</div>
+
+
+<div class="pdf-item">
+<strong>سطح طراحی سایت:</strong>
+<span id="pdf-web"></span>
+</div>
+
+
+<div class="pdf-item">
+<strong>HTML و CSS:</strong>
+<span id="pdf-html"></span>
+</div>
+
+
+<div class="pdf-item">
+<strong>هدف:</strong>
+<span id="pdf-goal"></span>
+</div>
+
+
+<div class="pdf-item">
+<strong>سیستم‌عامل:</strong>
+<span id="pdf-os"></span>
+</div>
+
+
+<div class="pdf-item">
+<strong>کامپیوتر شخصی:</strong>
+<span id="pdf-pc"></span>
+</div>
+
+</div>
+
+
+<div class="pdf-section-title">
+اطلاعات دوره
+</div>
+
+<div class="pdf-grid">
+
+
+<div class="pdf-item">
+<strong>عنوان دوره:</strong>
+طراحی سایت
+</div>
+
+
+<div class="pdf-item">
+<strong>مدرس:</strong>
+مهندس یاشار نژادمهدوی
+</div>
+
+
+<div class="pdf-item">
+<strong>تاریخ شروع:</strong>
+<span id="pdf-start"></span>
+</div>
+
+
+<div class="pdf-item">
+<strong>نحوه شرکت:</strong>
+<span id="pdf-type"></span>
+</div>
+
+</div>
+
+
+<div class="pdf-section-title">
+توضیحات
+</div>
+
+<div class="pdf-description">
+
+<span id="pdf-description"></span>
+
+</div>
+
+
+<div class="pdf-agreement">
+
+هنرجو قوانین و مقررات دوره را مطالعه کرده و آن را تأیید نموده است.
+
+</div>
+
+
+<div class="pdf-signature">
+
+<div>
+امضای هنرجو:
+<br><br>
+........................
+</div>
+
+<div>
+امضای مدرس:
+<br><br>
+مهندس یاشار نژادمهدوی
+</div>
+
+<div>
+تاریخ:
+<br><br>
+........................
+</div>
+
+</div>
+
+</div>
+
+
+<script>
+
+/* =====================================================
+   EMAILJS CONFIG
+===================================================== */
+
+const EMAILJS_PUBLIC_KEY =
+    "U5atY4bP09dd6PkER";
+
+const EMAILJS_SERVICE_ID =
+    "service_4kzk4z7";
+
+const EMAILJS_TEMPLATE_ID =
+    "template_lsp4bhn";
+
+
+/* =====================================================
+   CONTACT
+===================================================== */
+
+const TEACHER_EMAIL =
+    "ityasharmahdavi@gmail.com";
+
+const WHATSAPP_NUMBER =
+    "989394533181";
+
+
+/* =====================================================
+   INIT EMAILJS
+===================================================== */
+
+emailjs.init({
+
+    publicKey:
+        EMAILJS_PUBLIC_KEY
+
+});
+
+
+/* =====================================================
+   ELEMENTS
+===================================================== */
+
+const form =
+    document.getElementById(
+        "registrationForm"
+    );
+
+const submitBtn =
+    document.getElementById(
+        "submitBtn"
+    );
+
+const statusBox =
+    document.getElementById(
+        "status"
+    );
+
+
+/* =====================================================
+   REGISTRATION NUMBER
+===================================================== */
+
+function createRegistrationNumber(){
+
+    const now =
+        new Date();
+
+    return "WEB-" +
+
+        now.getFullYear() +
+
+        String(
+            now.getMonth()+1
+        ).padStart(2,"0") +
+
+        String(
+            now.getDate()
+        ).padStart(2,"0") +
+
+        "-" +
+
+        Math.floor(
+            1000 +
+            Math.random()*9000
+        );
+
+}
+
+
+/* =====================================================
+   GET VALUE
+===================================================== */
+
+function getValue(id){
+
+    const element =
+        document.getElementById(id);
+
+    if(!element){
+
+        return "-";
+
+    }
+
+    return element.value ||
+        "-";
+
+}
+
+
+/* =====================================================
+   GET RADIO
+===================================================== */
+
+function getRadio(name){
+
+    const selected =
+        document.querySelector(
+            'input[name="' +
+            name +
+            '"]:checked'
+        );
+
+    return selected
+        ? selected.value
+        : "-";
+
+}
+
+
+/* =====================================================
+   FILL RESULT
+===================================================== */
+
+function fillResult(id){
+
+    document.getElementById(
+        "r-id"
+    ).textContent = id;
+
+    document.getElementById(
+        "r-fullname"
+    ).textContent =
+        getValue("fullname");
+
+    document.getElementById(
+        "r-national"
+    ).textContent =
+        getValue("nationalCode");
+
+    document.getElementById(
+        "r-phone"
+    ).textContent =
+        getValue("phone");
+
+    document.getElementById(
+        "r-education"
+    ).textContent =
+        getValue("education");
+
+    document.getElementById(
+        "r-web"
+    ).textContent =
+        getRadio("web_level");
+
+    document.getElementById(
+        "r-goal"
+    ).textContent =
+        getRadio("goal");
+
+}
+
+
+/* =====================================================
+   FILL PRINT
+===================================================== */
+
+function fillPrintForm(id){
+
+    const fields = {
+
+        "p-id":id,
+
+        "p-fullname":
+            getValue("fullname"),
+
+        "p-national":
+            getValue("nationalCode"),
+
+        "p-birth":
+            getValue("birthDate"),
+
+        "p-phone":
+            getValue("phone"),
+
+        "p-parent":
+            getValue("parentPhone"),
+
+        "p-field":
+            getValue("field"),
+
+        "p-education":
+            getValue("education"),
+
+        "p-computer":
+            getValue("computerLevel"),
+
+        "p-web":
+            getRadio("web_level"),
+
+        "p-html":
+            getRadio("html_css"),
+
+        "p-goal":
+            getRadio("goal"),
+
+        "p-os":
+            getValue("os"),
+
+        "p-pc":
+            getRadio("personal_computer"),
+
+        "p-start":
+            getValue("startDate"),
+
+        "p-type":
+            getValue("classType"),
+
+        "p-description":
+            getValue("description")
+
+    };
+
+
+    Object.keys(fields).forEach(
+        function(key){
+
+            const element =
+                document.getElementById(
+                    key
+                );
+
+            if(element){
+
+                element.textContent =
+                    fields[key];
+
+            }
+
+        }
+    );
+
+}
+
+
+/* =====================================================
+   FILL PDF
+===================================================== */
+
+function fillPDF(id){
+
+    const fields = {
+
+        "pdf-id":id,
+
+        "pdf-fullname":
+            getValue("fullname"),
+
+        "pdf-national":
+            getValue("nationalCode"),
+
+        "pdf-birth":
+            getValue("birthDate"),
+
+        "pdf-phone":
+            getValue("phone"),
+
+        "pdf-parent":
+            getValue("parentPhone"),
+
+        "pdf-field":
+            getValue("field"),
+
+        "pdf-education":
+            getValue("education"),
+
+        "pdf-computer":
+            getValue("computerLevel"),
+
+        "pdf-web":
+            getRadio("web_level"),
+
+        "pdf-html":
+            getRadio("html_css"),
+
+        "pdf-goal":
+            getRadio("goal"),
+
+        "pdf-os":
+            getValue("os"),
+
+        "pdf-pc":
+            getRadio("personal_computer"),
+
+        "pdf-start":
+            getValue("startDate"),
+
+        "pdf-type":
+            getValue("classType"),
+
+        "pdf-description":
+            getValue("description")
+
+    };
+
+
+    Object.keys(fields).forEach(
+        function(key){
+
+            const element =
+                document.getElementById(
+                    key
+                );
+
+            if(element){
+
+                element.textContent =
+                    fields[key];
+
+            }
+
+        }
+    );
+
+}
+
+
+/* =====================================================
+   SUBMIT
+===================================================== */
+
+form.addEventListener(
+    "submit",
+    function(event){
+
+        event.preventDefault();
+
+
+        /* بررسی قوانین */
+
+        const rules =
+            document.getElementById(
+                "rulesAgreement"
+            );
+
+
+        if(!rules.checked){
+
+            statusBox.className =
+                "status error";
+
+            statusBox.textContent =
+                "لطفاً ابتدا قوانین و مقررات دوره را مطالعه و تأیید کنید.";
+
+            statusBox.style.display =
+                "block";
+
+            rules.scrollIntoView({
+                behavior:"smooth",
+                block:"center"
+            });
+
+            return;
+
+        }
+
+
+        /* شماره ثبت‌نام */
+
+        const registrationNumber =
+            createRegistrationNumber();
+
+
+        document.getElementById(
+            "registration_number"
+        ).value =
+            registrationNumber;
+
+
+        /* وضعیت */
+
+        submitBtn.disabled =
+            true;
+
+        submitBtn.textContent =
+            "در حال ارسال اطلاعات...";
+
+
+        statusBox.style.display =
+            "none";
+
+
+        /* ارسال EmailJS */
+
+        emailjs.sendForm(
+
+            EMAILJS_SERVICE_ID,
+
+            EMAILJS_TEMPLATE_ID,
+
+            form
+
+        )
+
+        .then(
+
+            function(response){
+
+                console.log(
+                    "EmailJS SUCCESS:",
+                    response
+                );
+
+
+                /* نتیجه */
+
+                fillResult(
+                    registrationNumber
+                );
+
+
+                /* چاپ */
+
+                fillPrintForm(
+                    registrationNumber
+                );
+
+
+                /* PDF */
+
+                fillPDF(
+                    registrationNumber
+                );
+
+
+                /* نمایش پیام */
+
+                statusBox.className =
+                    "status success";
+
+                statusBox.textContent =
+                    "ثبت‌نام با موفقیت انجام شد و اطلاعات برای مدرس ارسال گردید.";
+
+                statusBox.style.display =
+                    "block";
+
+
+                /* نمایش نتیجه */
+
+                document.getElementById(
+                    "result"
+                ).style.display =
+                    "block";
+
+
+                document.getElementById(
+                    "result"
+                ).scrollIntoView({
+
+                    behavior:"smooth"
+
+                });
+
+
+                submitBtn.disabled =
+                    false;
+
+                submitBtn.textContent =
+                    "✓ ثبت نهایی اطلاعات";
+
+            }
+
+        )
+
+        .catch(
+
+            function(error){
+
+                console.error(
+                    "EmailJS ERROR:",
+                    error
+                );
+
+
+                statusBox.className =
+                    "status error";
+
+                statusBox.textContent =
+                    "ارسال اطلاعات انجام نشد. لطفاً اتصال اینترنت و تنظیمات EmailJS را بررسی کنید.";
+
+                statusBox.style.display =
+                    "block";
+
+
+                submitBtn.disabled =
+                    false;
+
+                submitBtn.textContent =
+                    "✓ ثبت نهایی اطلاعات";
+
+            }
+
+        );
+
+    }
+);
+
+
+/* =====================================================
+   PRINT
+===================================================== */
+
+function printForm(){
+
+    window.print();
+
+}
+
+
+/* =====================================================
+   DOWNLOAD PDF
+===================================================== */
+
+function downloadPDF(){
+
+    const pdfArea =
+        document.getElementById(
+            "pdfArea"
+        );
+
+
+    const registrationNumber =
+        document.getElementById(
+            "r-id"
+        ).textContent;
+
+
+    fillPDF(
+        registrationNumber
+    );
+
+
+    const options = {
+
+        margin:0,
+
+        filename:
+            "ثبت-نام-" +
+            registrationNumber +
+            ".pdf",
+
+        image:{
+
+            type:"jpeg",
+
+            quality:.98
+
+        },
+
+        html2canvas:{
+
+            scale:2,
+
+            useCORS:true,
+
+            letterRendering:true
+
+        },
+
+        jsPDF:{
+
+            unit:"mm",
+
+            format:"a4",
+
+            orientation:"portrait"
+
+        }
+
+    };
+
+
+    html2pdf()
+
+        .set(options)
+
+        .from(pdfArea)
+
+        .save();
+
+}
+
+
+/* =====================================================
+   WHATSAPP
+===================================================== */
+
+function sendWhatsApp(){
+
+    const fullname =
+        getValue("fullname");
+
+    const phone =
+        getValue("phone");
+
+    const id =
+        document.getElementById(
+            "r-id"
+        ).textContent;
+
+
+    const message =
+
+        "سلام مهندس یاشار نژادمهدوی\n\n" +
+
+        "فرم ثبت‌نام دوره طراحی سایت را تکمیل کردم.\n\n" +
+
+        "نام و نام خانوادگی: " +
+        fullname +
+        "\n" +
+
+        "شماره تماس: " +
+        phone +
+        "\n" +
+
+        "شماره ثبت‌نام: " +
+        id +
+        "\n\n" +
+
+        "قوانین و مقررات دوره را نیز تأیید کرده‌ام.";
+
+
+    const url =
+
+        "https://wa.me/" +
+
+        WHATSAPP_NUMBER +
+
+        "?text=" +
+
+        encodeURIComponent(
+            message
+        );
+
+
+    window.open(
+        url,
+        "_blank"
+    );
+
+}
+
+
+/* =====================================================
+   RESET
+===================================================== */
+
+form.addEventListener(
+    "reset",
+    function(){
+
+        setTimeout(
+
+            function(){
+
+                document.getElementById(
+                    "result"
+                ).style.display =
+                    "none";
+
+                statusBox.style.display =
+                    "none";
+
+            },
+
+            100
+
+        );
+
+    }
+);
+
+</script>
+
+
+</body>
+
+</html>
+
